@@ -2,7 +2,7 @@
  * Submit it on or before Feb-06-2021 Saturday, 11:59PM.
  */
    
-1) Write a java function that adds all the digits of an integer until it is single digit.
+1) Write a java function that adds all the digits of an integer until it is single digit. (You may assume that input is a positive number)
 		i. function takes an integer as input and returns its sum of digits.
 		ii. for example input = 37, sum = 3+7 = 10, sum = 1+0 = 1. result = 1.
 
