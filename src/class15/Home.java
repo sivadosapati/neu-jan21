@@ -10,8 +10,26 @@ public class Home {
 
 		// thinkAndTalkConcurrently(yian, palak);
 		// makeTheWholeClassThinkAndTalk();
-		doMultipleThings(palak, yian);
+		// doMultipleThings(palak, yian);
+		// eatAndTalk(palak);
+		eatTalkDrinkSleep(yian);
 		System.out.println("After : " + currentTime());
+	}
+
+	private static void eatTalkDrinkSleep(Person yian) {
+		new Thread(() -> yian.eat()).start();
+		new Thread(() -> yian.talk()).start();
+		new Thread(() -> yian.drink()).start();
+		new Thread(() -> yian.sleep()).start();
+
+	}
+
+	private static void eatAndTalk(Person person) {
+		TalkingThread talk = new TalkingThread(person);
+		Thread eat = new Thread(new Eater(person));
+		talk.start();
+		eat.start();
+
 	}
 
 	private static void doMultipleThings(Person palak, Person yian) throws Exception {
