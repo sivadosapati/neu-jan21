@@ -1,10 +1,16 @@
 package class16;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Students {
-	private Map<Integer, Student> students = new HashMap<Integer, Student>();
+	protected Map<Integer, Student> students = new HashMap<Integer, Student>();
+
+	public Student getStudentForIndex(int index) {
+		ArrayList<Student> s = new ArrayList<Student>(students.values());
+		return s.get(index);
+	}
 
 	public void addStudent(Student student) {
 		students.put(student.roll, student);

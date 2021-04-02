@@ -1,8 +1,8 @@
 package class16;
 
 public class Student {
-	int roll;
-	String name;
+	public int roll;
+	public String name;
 
 	public Student(int roll, String name) {
 		super();

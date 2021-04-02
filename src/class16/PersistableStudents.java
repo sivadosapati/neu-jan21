@@ -24,8 +24,19 @@ public class PersistableStudents extends Students {
 	}
 
 	private void rewriteAllTheStudents() {
-		// TODO Auto-generated method stub
-		
+		try {
+			PrintWriter writer = new PrintWriter(new FileWriter(file), true);
+			for (Student student : students.values()) {
+				String line = student.roll + "," + student.name;
+				writer.println(line);
+
+			}
+			writer.flush();
+			writer.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	private void readAndLoadDataIntoMap() {
